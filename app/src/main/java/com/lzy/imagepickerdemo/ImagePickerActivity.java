@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
 import com.lzy.imagepicker.ui.ImageGridActivity;
+import com.lzy.imagepicker.util.statusbar.StatusBarUtils;
 import com.lzy.imagepicker.view.CropImageView;
 import com.lzy.imagepickerdemo.imageloader.GlideImageLoader;
 import com.lzy.imagepickerdemo.imageloader.PicassoImageLoader;
@@ -67,6 +68,7 @@ public class ImagePickerActivity extends AppCompatActivity implements SeekBar.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_image_picker);
 
         imagePicker = ImagePicker.getInstance();

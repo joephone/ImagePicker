@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.R;
+import com.lzy.imagepicker.util.statusbar.StatusBarUtils;
 import com.lzy.imagepicker.view.SystemBarTintManager;
 
 /**
@@ -31,6 +32,7 @@ public class ImageBaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtils.with(this).init();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             setTranslucentStatus(true);
         }
